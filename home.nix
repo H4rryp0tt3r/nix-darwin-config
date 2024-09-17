@@ -15,6 +15,7 @@ in {
       nixpkgs-fmt
       tmux
       qrencode
+      tig
     ];
 
     sessionVariables = {
