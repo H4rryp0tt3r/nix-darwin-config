@@ -18,6 +18,7 @@ in {
       docker
       docker-compose
       docker-buildx
+      htop
     ];
 
     sessionVariables = {
