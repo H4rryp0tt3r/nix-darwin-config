@@ -7,7 +7,6 @@ in {
     stateVersion = "24.05";
 
     packages = with pkgs; [
-      git
       tree
       wireguard-tools
       android-tools
