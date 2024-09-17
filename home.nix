@@ -5,7 +5,6 @@ in {
     inherit username;
     homeDirectory = "/Users/${username}";
     stateVersion = "24.05";
-    sessionPath = ["/usr/local/sbin"];
 
     packages = with pkgs; [
       git
@@ -16,11 +15,16 @@ in {
       tmux
       qrencode
       tig
+      colima
+      docker
+      docker-compose
+      docker-buildx
     ];
 
     sessionVariables = {
       EDITOR = "vim";
       SHELL = "zsh";
+      DOCKER_HOST = "unix://$HOME/.colima/docker.sock";
     };
   };
 
