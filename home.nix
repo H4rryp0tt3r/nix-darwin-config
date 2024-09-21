@@ -20,6 +20,7 @@ in {
       docker-buildx
       htop
       jq
+      imagemagick
     ];
 
     sessionVariables = {
