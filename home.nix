@@ -21,6 +21,7 @@ in {
       htop
       jq
       imagemagick
+      imgcat
     ];
 
     sessionVariables = {
