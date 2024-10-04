@@ -48,7 +48,16 @@
     enable = true;
     taps = [];
     brews = [];
-    casks = [];
+    casks = [
+      "1password"
+      "1password-cli"
+    ];
+
+    onActivation = {
+      autoUpdate = true;
+      upgrade = true;
+      cleanup = "zap";
+    };
   };
 
   # Enable Touch ID auth for sudo
