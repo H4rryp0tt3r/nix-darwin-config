@@ -1,7 +1,11 @@
 .PHONY: update
 update:
-	home-manager switch --flake .#h4rryp0tt3r
+	darwin-rebuild switch --flake .
 
 .PHONY: clean
 clean:
 	nix-collect-garbage -d
+
+.PHONY: clean-everything
+clean-everything:
+	sudo nix-collect-garbage -d

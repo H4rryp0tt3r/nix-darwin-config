@@ -7,21 +7,14 @@ in {
     stateVersion = "24.05";
 
     packages = with pkgs; [
-      tree
       wireguard-tools
       android-tools
-      nixpkgs-fmt
-      tmux
       qrencode
-      tig
       colima
       docker
       docker-compose
       docker-buildx
-      htop
-      jq
       imagemagick
-      imgcat
     ];
 
     sessionVariables = {
