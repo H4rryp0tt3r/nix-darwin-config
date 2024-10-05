@@ -1,6 +1,8 @@
-{ config, pkgs, ... }: let
-username = "h4rryp0tt3r";
-in {
+{ config, pkgs, ... }:
+let
+  username = "h4rryp0tt3r";
+in
+{
   home = {
     inherit username;
     homeDirectory = "/Users/${username}";
@@ -15,6 +17,8 @@ in {
       docker-compose
       docker-buildx
       imagemagick
+      jetbrains-mono
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 
     sessionVariables = {
@@ -59,5 +63,28 @@ in {
       set number
       syntax on
     '';
+  };
+
+  fonts.fontconfig.enable = true;
+
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      ms-vscode-remote.remote-ssh
+      ms-vscode-remote.remote-ssh-edit
+      ms-python.python
+      ms-python.vscode-pylance
+      jnoortheen.nix-ide
+      ms-vscode.makefile-tools
+      github.copilot
+      github.copilot-chat
+      ms-azuretools.vscode-docker
+    ];
+    userSettings = {
+      "files.autoSave" = "onFocusChange";
+      "editor.formatOnSave" = true;
+      "editor.fontFamily" = "JetBrainsMono Nerd Font Mono";
+      "editor.accessibilitySupport" = "off";
+    };
   };
 }

@@ -5,6 +5,8 @@
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
 
+  nixpkgs.config.allowUnfree = true;
+
   # Set Git commit hash for darwin-version.
   system.configurationRevision = gitRev;
 
