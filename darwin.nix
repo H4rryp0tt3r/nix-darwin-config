@@ -55,6 +55,7 @@
       "1password"
       "1password-cli"
       "iterm2"
+      "raycast"
     ];
 
     onActivation = {

@@ -13,11 +13,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    mac-app-util.url = "github:hraban/mac-app-util";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, mac-app-util }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
     let gitRev = self.rev or self.dirtyRev or "unknown-rev";
     in
     {
@@ -26,16 +24,12 @@
       darwinConfigurations."H4rryp0tt3r-MacBook" = nix-darwin.lib.darwinSystem {
         modules = [
           ./darwin.nix
-          mac-app-util.darwinModules.default
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.verbose = true;
             home-manager.users."h4rryp0tt3r" = import ./home.nix;
-            home-manager.sharedModules = [
-              mac-app-util.homeManagerModules.default
-            ];
           }
         ];
         specialArgs = { inherit gitRev; };
