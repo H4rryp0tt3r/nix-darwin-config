@@ -56,7 +56,21 @@
       "1password-cli"
       "iterm2"
       "raycast"
+      "rectangle"
+      "homerow"
+      "lunar"
+      "appcleaner"
+      "firefox"
+      "google-chrome"
+      "iina"
+      "zoom"
     ];
+
+    masApps = {
+      amphetamine = 937984704;
+      wireguard = 1451685025;
+      flycut = 442160987;
+    };
 
     onActivation = {
       autoUpdate = true;
