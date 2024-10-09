@@ -92,6 +92,16 @@
     show-recents = false;
     show-process-indicators = true;
     mru-spaces = false;
+    persistent-apps = [
+      "/Applications/Firefox.app"
+      "/Applications/iTerm.app"
+      "/Users/h4rryp0tt3r/Applications/Home Manager Apps/Visual Studio Code.app" # TODO: Pass username from the calling site
+    ];
+    # Disable hot corners
+    wvous-bl-corner = 1;
+    wvous-br-corner = 1;
+    wvous-tl-corner = 1;
+    wvous-tr-corner = 1;
   };
 
   system.defaults.finder = {
@@ -113,6 +123,11 @@
 
   system.defaults.trackpad.Clicking = true;
 
+  system.defaults.screencapture = {
+    location = "~/Desktop";
+    type = "jpg";
+  };
+
   system.defaults.CustomUserPreferences = {
     NSGlobalDomain = {
       # Add a context menu item for showing the Web Inspector in web views
@@ -127,10 +142,6 @@
       # Avoid creating .DS_Store files on network or USB volumes
       DSDontWriteNetworkStores = true;
       DSDontWriteUSBStores = true;
-    };
-    "com.apple.screencapture" = {
-      location = "~/Desktop";
-      type = "jpg";
     };
     "com.apple.AdLib" = {
       allowApplePersonalizedAdvertising = false;
