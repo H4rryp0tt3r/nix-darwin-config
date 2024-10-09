@@ -126,9 +126,22 @@
   system.defaults.screencapture = {
     location = "~/Desktop";
     type = "jpg";
+    disable-shadow = true;
   };
 
   system.defaults.CustomUserPreferences = {
+    "com.generalarcade.flycut" = {
+      # Set the number of items to keep in the clipboard history
+      rememberNum = 100;
+      loadOnStartup = 1;
+      wraparoundBezel = 1;
+      displayClippingSource = 1;
+      bezelAlpha = "0.5682296036073826";
+      bezelHeight = "444.8686883913591";
+      bezelWidth = "504.1858749901688";
+      menuIcon = 2;
+      removeDuplicates = 1;
+    };
     NSGlobalDomain = {
       # Add a context menu item for showing the Web Inspector in web views
       WebKitDeveloperExtras = true;
