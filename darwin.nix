@@ -121,6 +121,11 @@
     "com.apple.keyboard.fnState" = true;
   };
 
+  system.defaults.loginwindow = {
+    GuestEnabled = false;
+    SHOWFULLNAME = true;
+  };
+
   system.defaults.trackpad.Clicking = true;
 
   system.defaults.screencapture = {
