@@ -135,6 +135,17 @@
   };
 
   system.defaults.CustomUserPreferences = {
+    "com.apple.touchbar.agent" = {
+      "presentationModeGlobal" = "functionKeys";
+    };
+    "com.apple.symbolichotkeys" = {
+      AppleSymbolicHotKeys."64".enabled = 0; # Disable Spotlight Search shortcut (Cmd + Space)
+    };
+    "com.raycast.macos" = {
+      onboardingCompleted = 1;
+      raycastGlobalHotkey = "Command-49";
+      raycastShouldFollowSystemAppearance = 1;
+    };
     "com.generalarcade.flycut" = {
       # Set the number of items to keep in the clipboard history
       rememberNum = 100;
