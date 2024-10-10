@@ -152,9 +152,9 @@
       loadOnStartup = 1;
       wraparoundBezel = 1;
       displayClippingSource = 1;
-      bezelAlpha = "0.5682296036073826";
-      bezelHeight = "444.8686883913591";
-      bezelWidth = "504.1858749901688";
+      bezelAlpha = "0.8";
+      bezelHeight = "400";
+      bezelWidth = "600";
       menuIcon = 2;
       removeDuplicates = 1;
     };
