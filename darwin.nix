@@ -1,4 +1,4 @@
-{ pkgs, gitRev, ... }: {
+{ pkgs, gitRev, ... }: rec {
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
 
@@ -162,6 +162,10 @@
         bezelWidth = "600";
         menuIcon = 2;
         removeDuplicates = 1;
+      };
+      "com.googlecode.iterm2.plist" = {
+        PrefsCustomFolder = "${users.users.h4rryp0tt3r.home}/nix-darwin-config/config/iTerm";
+        LoadPrefsFromCustomFolder = true;
       };
       "com.apple.finder" = {
         ShowExternalHardDrivesOnDesktop = true;
